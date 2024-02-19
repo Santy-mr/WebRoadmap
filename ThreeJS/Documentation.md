@@ -14,6 +14,9 @@ Despues necesitamos una escena, una camara de la vista que queramos y aesta asig
 
 ``` const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000); ```
 
+> [!NOTE]
+> Los valores por defecto de lo lejos que vera la camara es 2000 y lo cerca es 0.1.
+
 Despues se necesitara un renderer el cual se debera agregar al mismo canvas que creamos en el archivo HTML, y a este se le debera asignar cuandos pixeles queremos que tenga, asi como el tamaño que queramos que tenga este.
 
 ``` const renderer = new THREE.WebGLRenderer({canvas: document.querySelector('#ID de Canvas'), }); ```
