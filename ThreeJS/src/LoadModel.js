@@ -1,6 +1,6 @@
-import './style.css'
+import '../styles/style.css'
 import * as THREE from 'three';
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js'; 
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 let scene, camera, renderer, Heart, target;
@@ -9,7 +9,7 @@ function init() {
   scene = new THREE.Scene();
   camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight);
   renderer = new THREE.WebGLRenderer({
-    canvas: document.querySelector("#bg"), alpha:false
+    canvas: document.querySelector("#bg"), alpha: false
   }, undefined, function (error) {
 
     console.error(error);
@@ -21,7 +21,7 @@ function init() {
   camera.position.setZ(2);
 
   const loader = new GLTFLoader();
-  loader.load("./Heart.glb", function (gltf) {
+  loader.load("../assets/Heart.glb", function (gltf) {
     const model = gltf.scene;
     scene.add(gltf.scene);
     Heart = model.getObjectByName('Eye');
@@ -29,7 +29,7 @@ function init() {
 
   const ambientLight = new THREE.AmbientLight(0xffffff);
   scene.add(ambientLight);
-  const controls = new OrbitControls(camera, renderer.domElement); 
+  const controls = new OrbitControls(camera, renderer.domElement);
 
   target = new THREE.Object3D();
   target.position.z = 2;
@@ -49,10 +49,10 @@ function init() {
     raycaster.ray.intersectPlane(plane, intersectionPoint);
     target.position.set(intersectionPoint.x, intersectionPoint.y, 2);
   });
-/* 
-  const pointLight = new THREE.PointLight("red",2)
-  pointLight.position.set(0, 1, -1);
-  scene.add(pointLight); */
+  /* 
+    const pointLight = new THREE.PointLight("red",2)
+    pointLight.position.set(0, 1, -1);
+    scene.add(pointLight); */
 }
 
 function animate() {
@@ -63,7 +63,7 @@ function animate() {
   }
 }
 
-function OnWindowResize(){
+function OnWindowResize() {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
