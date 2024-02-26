@@ -43,7 +43,15 @@ Si queremos que este se actualize constantemente para que actue como una animaci
 Para tener algun objeto dentro de la escena necesita tres elementos fundamentales **(Geometria,Material y una Malla)**. La Geometria constituye la forma que queremos que tenga la libreria de THREE nos incluye varias formas distintas que podemos usar con las cuales todas tienen diferentes parametros que podemos ajustar como: **"Altura, Anchura, Profunidad, Radio, Segmentos de cada uno de estos y mucho mas"**.
 
 ### Material
-Existen muchos tipos de materiales el mas basico de estos se denomina como **"MeshStandard Material"** este no es afectado por 
+Existen muchos tipos de materiales el mas basico de estos se denomina como **"MeshStandard Material"** este no es afectado por la luz, a este le tendras que asignar un color puede ser Hexadecimal o a su vez escrito en comillas.
 
 > [!TIP]
 > Cuando escribimos antes de un color **"0x"** significa una denotacion para cuando estamos utilizando codigos hexadecimales 
+
+### Malla
+Este toma los parametros anteriores para asi dibujarlos en la escena que creamos para esto le debemos pasar las variables anteriores, despues de esto tenemos que agregar el objeto en la escena usando 
+
+> [!NOTE]
+> Estos objetos ya tienen valores definidos por la comunidad estos son **geometry** para los vertices o la figura deseada, **material** para cualquier tipo de material que queramos agregarle a nuestro y **mesh** para la malla.
+
+``` const mesh = new THREE.Mesh( geometry, material ); ```
