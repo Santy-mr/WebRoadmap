@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos de HTML</title>
+    <meta name="description" content="En este documento aprendemos los fundamentos de Html" />
+</head>
+<body>
+    <h1 id="inicio">Fundamentos de Html</h1>
+    <ul>
+        <li><a href="#Encabezados">Encabezados</a></li>
+        <li><a href="#Etiquetas">Etiquetas</a></li>
+        <li><a href="#Listas">Listas</a></li>
+        <li><a href="#Tablas">Tablas</a></li>
+        <li><a href="#Imagenes">Imagenes</a></li>
+        <li><a href="#Formularios">Formularios</a></li>
+    </ul>
+
+    <h2 id="Encabezados">Encabezados</h2>
+    <h1>Encabezado 1</h1>
+    <h2>Encabezado 2</h2>
+    <h3>Encabezado 3</h3>
+    <h4>Encabezado 4</h4>
+    <h5>Encabezado 5</h5>
+    <h6>Encabezado 6</h6>
+    <hr>
+
+    <h2 id="Etiquetas">Etiquetas para texto</h2>
+    <span><b>Lorem ipsum dolor</b> sit amet consectetur adipisicing elit. Sapiente voluptatibus, magnam similique
+        praesentium laudantium eaque optio enim odit accusantium soluta fuga repellendus, libero odio neque dolor non
+        natus tenetur labore.</span>
+    <div><b>Texto en negritas</b></div>
+    <div><i>Texto en cursiva</i></div>
+    <div><u>Texto en subrayado</u></div>
+    <div><s>Texto en tachado</s></div>
+    <div><small>Letras pequeñas</small></div>
+    <div><b><i>Texto en negrita y cursiva</i></b></div>
+    <div><mark>Texto remarcado</mark></div>
+    <hr>
+
+    <h2 id="Listas">Listas</h2>
+    <h3>Listas ordenadas</h3>
+    <ul>
+        <li>Primavera</li>
+        <li>Verano</li>
+        <li>Otoño</li>
+        <li>Invierno</li>
+    </ul>
+    <hr>
+
+    <h2 id="Tablas">Tablas</h2>
+    <table>
+        <tr>
+            <th>Ciudad</th>
+            <th>País</th>
+            <th>Continente</th>
+        </tr>
+        <tr>
+            <td>Ciudad de México</td>
+            <td>México</td>
+            <td>América</td>
+        </tr>
+        <tr>
+            <td>Tokyo</td>
+            <td>Japón</td>
+            <td>Asia</td>
+        </tr>
+        <tr>
+            <td>Reikiavik</td>
+            <td>Islandia</td>
+            <td>Europa</td>
+        </tr>
+    </table>
+    <hr>
+
+    <h2 id="Imagenes">Imagenes</h2>
+    <img src="../../assets/TestImage.avif" style="width: 200px;">
+    <hr>
+
+    <h2 id="Formularios">Formularios</h2>
+    <form action="basics.html" method="get" enctype="multipart/form-data">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required>
+        </div>
+        <div>
+            <label for="age">Age</label>
+            <input type="number" name="age" id="age" min="1" max="200" step="5">
+        </div>
+        <div>
+            <label for="date">Birthdate</label>
+            <input type="date" name="date" id="date" min="2020-06-10">
+        </div>
+        <div>
+            <div>
+                <label for="check1">Checkbox1</label>
+                <input type="checkbox" name="check1" id="check1">
+            </div>
+            <div>
+                <label for="check2">Checkbox2</label>
+                <input type="checkbox" name="check2" id="check2">
+            </div>
+        </div>
+        <div>
+            <label for="radio1">Radio1</label>
+            <input type="radio" name="sections" id="radio1" value="radio1">
+        </div>
+        <div>
+            <label for="radio2">Radio2</label>
+            <input type="radio" name="sections" id="radio2" value="radio2">
+        </div>
+        <div>
+            <label for="eyeColor">Eye Color</label>
+            <select name="eyeColor" id="eyeColor" multiple>
+                <option value="Green">Green</option>
+                <option value="Red" label="Red"></option>
+            </select>
+        </div>
+        <div>
+            <label for="bio">Bio</label>
+            <textarea name="bio" id="bio"></textarea>
+        </div>
+        <input type="hidden" name="hidden" value="Hi">
+        <div>
+            <label for="file">File</label>
+            <input type="file" id="file" name="file">
+        </div>
+        <div>
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone">
+        </div>
+        <div>
+            <label for="url">URL</label>
+            <input type="url" id="url" name="url">
+        </div>
+        <div>
+            <label for="color">Color</label>
+            <input type="color" name="color" id="color">
+        </div>
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+    <div id="results"></div>
+    <script>
+        const resultsList = document.getElementById('results')
+        new URLSearchParams(window.location.search).forEach((value, name) => {
+            resultsList.append(`${name}: ${value}`)
+            resultsList.append(document.createElement('br'))
+        })
+    </script>
+    <hr>
+</body>
+</html>

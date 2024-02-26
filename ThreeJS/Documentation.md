@@ -52,6 +52,6 @@ Existen muchos tipos de materiales el mas basico de estos se denomina como **"Me
 Este toma los parametros anteriores para asi dibujarlos en la escena que creamos para esto le debemos pasar las variables anteriores, despues de esto tenemos que agregar el objeto en la escena usando 
 
 > [!NOTE]
-> Estos objetos ya tienen valores definidos por la comunidad estos son **geometry** para los vertices o la figura deseada, **material** para cualquier tipo de material que queramos agregarle a nuestro y **mesh** para la malla.
+> Estos objetos ya tienen valores definidos por la comunidad estos son **geometry** para los vertices o la figura deseada, **material** para cualquier tipo de material que queramos agregarle a nuestro y **mesh** para la malla .
 
 ``` const mesh = new THREE.Mesh( geometry, material ); ```
