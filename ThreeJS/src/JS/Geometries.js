@@ -42,7 +42,7 @@ export function Geometries(){
     const positionsAttribute = new THREE.BufferAttribute(positionsArray,3);
     geometry.setAttribute('position', positionsAttribute);
 
-    const material = new THREE.MeshBasicMaterial({ color: 0x0000ff, wireframe: true})
+    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00, wireframe: true})
     const mesh = new THREE.Mesh(geometry,material);
     scene.add(mesh);
 
