@@ -7,4 +7,4 @@ import { DebugUI } from "./DebugUI.js";
 
 import { Model } from "./LoadModel.js";
 
-DebugUI();
+DebugUI(); 
