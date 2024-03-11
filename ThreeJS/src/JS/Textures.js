@@ -8,12 +8,12 @@ export function Textures() {
     const loadingManager = new THREE.LoadingManager();
     const textureLoader = new THREE.TextureLoader(loadingManager);
     const colorTexture = textureLoader.load('../../static/textures/minecraft.png');
-    const alphaTexture = textureLoader.load('../../static/textures/door/alpha.jpg');
-    const heightTexture = textureLoader.load('../../static/textures/door/height.jpg');
-    const normalTexture = textureLoader.load('../../static/textures/door/normal.jpg');
-    const occlusionTexture = textureLoader.load('../../static/textures/door/ambientOcclusion.jpg');
-    const metalnessTexture = textureLoader.load('../../static/textures/door/metalness.jpg');    
-    const roughnessTexture = textureLoader.load('../../static/textures/door/roughness.jpg');
+    // const alphaTexture = textureLoader.load('../../static/textures/door/alpha.jpg');
+    // const heightTexture = textureLoader.load('../../static/textures/door/height.jpg');
+    // const normalTexture = textureLoader.load('../../static/textures/door/normal.jpg');
+    // const occlusionTexture = textureLoader.load('../../static/textures/door/ambientOcclusion.jpg');
+    // const metalnessTexture = textureLoader.load('../../static/textures/door/metalness.jpg');    
+    // const roughnessTexture = textureLoader.load('../../static/textures/door/roughness.jpg');
     colorTexture.colorSpace = THREE.SRGBColorSpace
 
     // colorTexture.repeat.x =2;
