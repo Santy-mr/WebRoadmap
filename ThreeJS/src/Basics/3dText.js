@@ -74,7 +74,6 @@ export function DText(){
         }
     })
 
-
     const camera = new THREE.PerspectiveCamera(75,sizes.width/sizes.height)
     camera.position.set(0,0,5);
     scene.add(camera)
@@ -82,7 +81,7 @@ export function DText(){
     const renderer = new THREE.WebGLRenderer({ canvas:canvas })
     renderer.setSize(sizes.width,sizes.height)
 
-    const controls = new OrbitControls(camera,canvas);
+    const controls = OrbitControls(camera,canvas);
     controls.enableDamping = true
 
     function animate(){

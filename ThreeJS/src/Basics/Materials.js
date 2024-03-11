@@ -208,8 +208,8 @@ export function Materials(){
 
     scene.add(sphere,plane,torus);
 
-    sphere.position.set(-1.5,0,0);
-    torus.position.set(1.5,0,0);
+    sphere.position.set(-1.5,2,0);
+    torus.position.set(1.5,2,0);
 
     const camera = new THREE.PerspectiveCamera(75,sizes.width/sizes.height);
     camera.position.set(0, 0, 8);
