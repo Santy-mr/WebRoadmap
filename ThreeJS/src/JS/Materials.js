@@ -3,7 +3,7 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
 import GUI from 'lil-gui';
 import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader'
 
-export function materials(){
+export function Materials(){
     const canvas = document.querySelector('#bg')
     
     const gui = new GUI({

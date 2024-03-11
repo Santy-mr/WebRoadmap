@@ -5,8 +5,9 @@ import { FullscreenResizer } from "./Fullscreen&Resize.js";
 import { Geometries } from "./Geometries.js";
 import { DebugUI } from "./DebugUI.js"; 
 import { Textures } from "./Textures.js";
-import { materials } from "./Materials.js";
+import { Materials } from "./Materials.js";
+import { DText } from "./3dText.js"; 
 
 import { Model } from "./LoadModel.js";
 
-materials();
+DText();
