@@ -30,16 +30,16 @@ export function Materials(){
     const scene = new THREE.Scene();
 
     const textureLoader = new THREE.TextureLoader();
-    const doorcolorTexture = textureLoader.load('../../static/textures/door/color.jpg');
-    const dooralphaTexture = textureLoader.load('../../static/textures/door/alpha.jpg');
-    const doorheightTexture = textureLoader.load('../../static/textures/door/height.jpg');
-    const doornormalTexture = textureLoader.load('../../static/textures/door/normal.jpg');
-    const doorocclusionTexture = textureLoader.load('../../static/textures/door/ambientOcclusion.jpg');
-    const doormetalnessTexture = textureLoader.load('../../static/textures/door/metalness.jpg');    
-    const doorroughnessTexture = textureLoader.load('../../static/textures/door/roughness.jpg');
+    const doorcolorTexture = textureLoader.load('/textures/door/color.jpg');
+    const dooralphaTexture = textureLoader.load('/textures/door/alpha.jpg');
+    const doorheightTexture = textureLoader.load('/textures/door/height.jpg');
+    const doornormalTexture = textureLoader.load('/textures/door/normal.jpg');
+    const doorocclusionTexture = textureLoader.load('/textures/door/ambientOcclusion.jpg');
+    const doormetalnessTexture = textureLoader.load('/textures/door/metalness.jpg');    
+    const doorroughnessTexture = textureLoader.load('/textures/door/roughness.jpg');
 
-    const matcapTexture = textureLoader.load('../../static/textures/matcaps/8.png')
-    const gradientTexture = textureLoader.load('../../static/textures/gradients/5.jpg')
+    const matcapTexture = textureLoader.load('/textures/matcaps/8.png')
+    const gradientTexture = textureLoader.load('/textures/gradients/5.jpg')
 
     doorcolorTexture.colorSpace = THREE.SRGBColorSpace
     matcapTexture.colorSpace = THREE.SRGBColorSpace
@@ -196,7 +196,7 @@ export function Materials(){
     TransmissionFolder.add(material, 'thickness').min(0).max(1).step(.0001);
 
     const rgbeLoader = new RGBELoader() 
-    rgbeLoader.load('../../static/textures/environmentMap/2k.hdr', (environmentMap) =>{
+    rgbeLoader.load('/textures/environmentMap/2k.hdr', (environmentMap) =>{
         environmentMap.mapping = THREE.EquirectangularReflectionMapping
         scene.background = environmentMap;
         scene.environment = environmentMap;

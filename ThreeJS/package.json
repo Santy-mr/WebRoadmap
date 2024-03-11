@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "vercel --prod"
   },
   "devDependencies": {
     "vite": "^5.1.5"
@@ -14,7 +15,8 @@
   "dependencies": {
     "gsap": "^3.12.5",
     "lil-gui": "^0.19.2",
-    "three": "^0.161.0"
+    "three": "^0.161.0",
+    "vercel": "^33.5.5"
   },
   "main": "main.js",
   "keywords": [],

@@ -1,8 +1,8 @@
 import * as THREE from 'three'
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
 import GUI from 'lil-gui';
-import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js'
-import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
+import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js';
+import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry.js'
 
 export function DText(){
     const canvas = document.querySelector('#bg');
@@ -30,13 +30,13 @@ export function DText(){
     })
 
     const textureLoader = new THREE.TextureLoader();
-    const matcapTexture = textureLoader.load('/static/textures/matcaps/8.png')
+    const matcapTexture = textureLoader.load('/textures/matcaps/8.png')
     matcapTexture.colorSpace = THREE.SRGBColorSpace
 
     const fontLoader = new FontLoader();
-    fontLoader.load('/static/fonts/helvetiker_regular.typeface.json',(font) => {
+    fontLoader.load('/fonts/helvetiker_regular.typeface.json',(font) => {
         const textGeometry = new TextGeometry(
-            'El Edgar se la come',{
+            'El Wilbert se la come',{
                 font: font,
                 size:0.5,
                 height: 0.2,
@@ -54,8 +54,6 @@ export function DText(){
 
         const text = new THREE.Mesh(textGeometry,Material)
         scene.add(text);
-        
-        console.time('donuts')
 
         const donutGeometry = new THREE.TorusGeometry(0.3, 0.2, 20, 45);
 
@@ -74,8 +72,6 @@ export function DText(){
 
             scene.add(donut)
         }
-
-        console.timeEnd('donuts')
     })
 
 
