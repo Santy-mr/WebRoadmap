@@ -1,6 +1,7 @@
 import * as THREE from 'three'
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
 import GUI from 'lil-gui';
+import { RectAreaLightHelper } from 'three/examples/jsm/helpers/RectAreaLightHelper.js';
 
 export function Luces() {
     const canvas = document.querySelector('#bg')
@@ -64,9 +65,7 @@ export function Luces() {
     directionalLightFolder.addColor(directionalLight, 'color')
     directionalLightFolder.add(directionalLight, 'intensity', 0, 10, .001)
     directionalLight.position.set(1, 0.25, 0)
-    const directionalHelper = new THREE.DirectionalLightHelper(directionalLight)
     scene.add(directionalLight);
-    // scene.add(directionalHelper)
 
     //Hemisphere Light
     const hemisphereLight = new THREE.HemisphereLight(0xff0000, 0x0000ff, 0.3)
@@ -75,20 +74,16 @@ export function Luces() {
     hemisphereLightFolder.addColor(hemisphereLight, 'color')
     hemisphereLightFolder.addColor(hemisphereLight, 'groundColor')
     hemisphereLightFolder.add(hemisphereLight, 'intensity', 0, 10, .001)
-    const hemisphereHelper = new THREE.HemisphereLightHelper(hemisphereLight);
     scene.add(hemisphereLight);
-    // scene.add(hemisphereHelper);
 
     //PointLight Light
-    const pointLight = new THREE.PointLight(0x00fffc, 1.5, 10, 2);
+    const pointLight = new THREE.PointLight(0xff9000, 1.5, 10, 2);
     pointLight.position.set(1, - 0.5, 1)
     const pointLightFolder = gui.addFolder('PointLight');
     pointLightFolder.close();
     pointLightFolder.addColor(pointLight, 'color');
     pointLightFolder.add(pointLight, 'intensity', 0, 10, 0.001);
-    const pointLightHelper = new THREE.PointLightHelper(pointLight);
     scene.add(pointLight)
-    // scene.add(pointLightHelper);
 
     //Rect Area Light
     const rectAreaLight = new THREE.RectAreaLight(0x4e00ff, 6, 1, 1);
@@ -114,10 +109,25 @@ export function Luces() {
     spotLightFolder.add(spotLight, 'penumbra', 0, 1, 0.001)
     spotLightFolder.add(spotLight, 'decay', 0, 2, 0.001)
     scene.add(spotLight)
-
     spotLight.target.position.x = -0.75;
     scene.add(spotLight.target);
 
+    //Helpers
+
+    const hemisphereLightHelper = new THREE.HemisphereLightHelper(hemisphereLight, 0.1);
+    scene.add(hemisphereLightHelper)
+
+    const directionalLightHelper = new THREE.DirectionalLightHelper(directionalLight,0.1);
+    scene.add(directionalLightHelper)
+
+    const pointLightHelper = new THREE.PointLightHelper(pointLight,0.1);
+    scene.add(pointLightHelper)
+
+    const spotLightHelper = new THREE.SpotLightHelper(spotLight);
+    scene.add(spotLightHelper);
+
+    const rectAreaLightHelper = new RectAreaLightHelper(rectAreaLight)
+    scene.add(rectAreaLightHelper)
 
     const renderer = new THREE.WebGLRenderer({ canvas: canvas })
     renderer.setSize(sizes.width, sizes.height)

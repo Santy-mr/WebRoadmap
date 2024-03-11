@@ -81,7 +81,7 @@ export function DText(){
     const renderer = new THREE.WebGLRenderer({ canvas:canvas })
     renderer.setSize(sizes.width,sizes.height)
 
-    const controls = OrbitControls(camera,canvas);
+    const controls = new OrbitControls(camera,canvas);
     controls.enableDamping = true
 
     function animate(){
