@@ -83,6 +83,8 @@ export function DText(){
 
     const controls = new OrbitControls(camera,canvas);
     controls.enableDamping = true
+    controls.enableZoom = false;
+    controls.enablePan = false;
 
     function animate(){
         requestAnimationFrame(animate)
