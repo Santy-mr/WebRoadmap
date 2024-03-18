@@ -12,8 +12,8 @@ import { DText } from "./Basics/3dText.js";
 //Classic Techniques
 import { Luces } from "./ClassicTechniques/Lights.js";
 import { Shadows } from "./ClassicTechniques/Shadows.js";
-
+import { HauntedHouse } from "./ClassicTechniques/HauntedHouse.js";
 
 import { Model } from "./Basics/LoadModel.js";
 
-Shadows();
+HauntedHouse();
