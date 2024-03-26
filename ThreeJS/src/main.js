@@ -14,7 +14,9 @@ import { Luces } from "./ClassicTechniques/Lights.js";
 import { Shadows } from "./ClassicTechniques/Shadows.js";
 import { HauntedHouse } from "./ClassicTechniques/HauntedHouse.js";
 import { Particles } from "./ClassicTechniques/Particles.js";
+import { Galaxy } from "./ClassicTechniques/Galaxy.js";
+import { HeartParticles } from "./ClassicTechniques/Heart.js";
 
 import { Model } from "./Basics/LoadModel.js";
 
-Particles();
+HeartParticles();

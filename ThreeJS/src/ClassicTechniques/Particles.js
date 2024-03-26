@@ -29,6 +29,7 @@ export function Particles(){
     const particlesTexture = textureLoader.load('/textures/particles/8.png')
 
     const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x000000)
 
     const particlesGeometry = new THREE.BufferGeometry()
     const count = 20000;
@@ -41,7 +42,7 @@ export function Particles(){
     }
 
     particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions,3))
-    particlesGeometry.setAttribute('color', new THREE.BufferAttribute(colors,3))
+    particlesGeometry.setAttribute('color', new THREE.BufferAttribute(positions,3))
     const particlesMaterial = new THREE.PointsMaterial({
         size: 0.1,
         sizeAttenuation: true,
@@ -77,13 +78,13 @@ export function Particles(){
 
         const elapsedTime = clock.getElapsedTime()
 
-        for (let i = 0; i < count; i++) {
-            const i3 = i * 3
+        // for (let i = 0; i < count; i++) {
+        //     const i3 = i * 3
 
-            const x = particlesGeometry.attributes.position.array[i3]
-            particlesGeometry.attributes.position.array[i3+1] = Math.sin(elapsedTime + x)
-        }
-        particlesGeometry.attributes.position.needsUpdate = true
+        //     const x = particlesGeometry.attributes.position.array[i3]
+        //     particlesGeometry.attributes.position.array[i3+1] = Math.sin(elapsedTime + x)
+        // }
+        // particlesGeometry.attributes.position.needsUpdate = true
 
         controls.update()
         renderer.render(scene,camera)
