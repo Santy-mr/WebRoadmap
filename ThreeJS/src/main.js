@@ -16,7 +16,10 @@ import { HauntedHouse } from "./ClassicTechniques/HauntedHouse.js";
 import { Particles } from "./ClassicTechniques/Particles.js";
 import { Galaxy } from "./ClassicTechniques/Galaxy.js";
 import { HeartParticles } from "./ClassicTechniques/Heart.js";
+import { Scroll } from "./ClassicTechniques/Scroll.js";
+
+//Advanced Techniques
 
 import { Model } from "./Basics/LoadModel.js";
 
-HeartParticles();
+Scroll();

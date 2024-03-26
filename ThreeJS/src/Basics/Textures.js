@@ -7,7 +7,7 @@ export function Textures() {
     //Texture  Lesson
     const loadingManager = new THREE.LoadingManager();
     const textureLoader = new THREE.TextureLoader(loadingManager);
-    const colorTexture = textureLoader.load('/textures/minecraft.png');
+    const colorTexture = textureLoader.load('/textures/textureLesson/minecraft.png');
     // const alphaTexture = textureLoader.load('/textures/door/alpha.jpg');
     // const heightTexture = textureLoader.load('/textures/door/height.jpg');
     // const normalTexture = textureLoader.load('/textures/door/normal.jpg');
