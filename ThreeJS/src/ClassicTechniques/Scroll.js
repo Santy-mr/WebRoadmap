@@ -33,9 +33,10 @@ export function Scroll(){
         materialColor: '#ffeded'
     }
 
-    const material = new THREE.MeshToonMaterial({
-        color:parameters.materialColor,
-        gradientMap: gradientTexture
+    const material = new THREE.MeshNormalMaterial({
+        flatShading:true
+        // color:parameters.materialColor,
+        // gradientMap: gradientTexture
     })
 
     const objectsDistance = 4
@@ -92,7 +93,7 @@ export function Scroll(){
     scene.add(directionalLight)
 
     gui.addColor(parameters,'materialColor').onChange(() => {
-        material.color.set(parameters.materialColor),
+        //material.color.set(parameters.materialColor),
         particlesMaterial.color.set(parameters.materialColor)
 
     } )
