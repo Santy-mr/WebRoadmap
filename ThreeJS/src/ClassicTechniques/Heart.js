@@ -1,8 +1,8 @@
 import * as THREE from 'three'
 import GUI from 'lil-gui';
 
-const canvas = document.querySelector('#bg')
-const contentleft  = document.querySelector('.right-container')
+const canvas = document.querySelector('#canvas')
+const contentleft  = document.querySelector('.end-wrapper')
 
 const sizes = {
     width: contentleft.clientWidth,
