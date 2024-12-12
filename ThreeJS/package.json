@@ -10,13 +10,19 @@
     "deploy": "vercel --prod"
   },
   "devDependencies": {
-    "vite": "^5.1.5"
+    "vite": "^6.0.3"
   },
   "dependencies": {
     "gsap": "^3.12.5",
-    "lil-gui": "^0.19.2",
-    "three": "^0.161.0",
-    "vercel": "^33.5.5"
+    "lil-gui": "^0.20.0",
+    "three": "^0.171.0",
+    "vercel": "^39.2.2"
+  },
+  "overrides": {
+    "debug": "^4.3.4",
+    "semver": "^7.5.2",
+    "tar": "^6.2.1",
+    "path-to-regexp": "^1.8.0"
   },
   "main": "main.js",
   "keywords": [],
