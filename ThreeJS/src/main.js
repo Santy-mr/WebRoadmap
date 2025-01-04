@@ -22,5 +22,7 @@ import { Scroll } from "./ClassicTechniques/Scroll.js";
 //import { HeartParticles } from "./ClassicTechniques/Heart.js";
 import { Model } from "./Basics/LoadModel.js";
 
-// Scroll();
-Galaxy();
+HauntedHouse();
+
+//Scroll();
+//Galaxy();
