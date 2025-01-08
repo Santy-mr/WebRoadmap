@@ -26,7 +26,7 @@ export function Particles(){
     })
 
     const textureLoader = new THREE.TextureLoader();
-    const particlesTexture = textureLoader.load('/textures/particles/8.png')
+    const particlesTexture = textureLoader.load('/textures/particles/8.webp')
 
     const scene = new THREE.Scene();
     scene.background = new THREE.Color(0x000000)

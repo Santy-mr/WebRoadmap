@@ -22,7 +22,7 @@ export function Model(){
     camera.position.setZ(2);
     
     const loader = new GLTFLoader();
-    loader.load("../assets/Heart.glb", function (gltf) {
+    loader.load("/Heart.glb", function (gltf) {
       const model = gltf.scene;
       scene.add(gltf.scene);
       Heart = model.getObjectByName('Eye');
@@ -50,10 +50,10 @@ export function Model(){
       raycaster.ray.intersectPlane(plane, intersectionPoint);
       target.position.set(intersectionPoint.x, intersectionPoint.y, 2);
     });
-    /* 
+    
     const pointLight = new THREE.PointLight("red",2)
     pointLight.position.set(0, 1, -1);
-    scene.add(pointLight); */
+    scene.add(pointLight); 
   }
   
   function animate() {

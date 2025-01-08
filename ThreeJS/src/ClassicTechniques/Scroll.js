@@ -11,9 +11,9 @@ export function Scroll(){
     })
 
     const textureLoader = new THREE.TextureLoader();
-    const gradientTexture = textureLoader.load('/textures/gradients/3.jpg')
+    const gradientTexture = textureLoader.load('/textures/gradients/3.webp')
     gradientTexture.magFilter = THREE.NearestFilter
-    const particlesTexture = textureLoader.load('/textures/particles/5.png')
+    const particlesTexture = textureLoader.load('/textures/particles/5.webp')
 
     const sizes = {
         width: window.innerWidth,

@@ -29,20 +29,20 @@ export function HauntedHouse(){
 
     //#region DoorTextures
     const textureLoader = new THREE.TextureLoader();
-    const doorcolorTexture = textureLoader.load('/textures/door/color.jpg');
-    const dooralphaTexture = textureLoader.load('/textures/door/alpha.jpg');
-    const doorheightTexture = textureLoader.load('/textures/door/height.jpg');
-    const doornormalTexture = textureLoader.load('/textures/door/normal.jpg');
-    const doorocclusionTexture = textureLoader.load('/textures/door/ambientOcclusion.jpg');
-    const doormetalnessTexture = textureLoader.load('/textures/door/metalness.jpg');    
-    const doorroughnessTexture = textureLoader.load('/textures/door/roughness.jpg');
+    const doorcolorTexture = textureLoader.load('/textures/door/color.webp');
+    const dooralphaTexture = textureLoader.load('/textures/door/alpha.webp');
+    const doorheightTexture = textureLoader.load('/textures/door/height.webp');
+    const doornormalTexture = textureLoader.load('/textures/door/normal.webp');
+    const doorocclusionTexture = textureLoader.load('/textures/door/ambientOcclusion.webp');
+    const doormetalnessTexture = textureLoader.load('/textures/door/metalness.webp');    
+    const doorroughnessTexture = textureLoader.load('/textures/door/roughness.webp');
     doorcolorTexture.colorSpace = THREE.SRGBColorSpace
     //#endregion
 
     //#region WallsTextures
-    const brickscolorTexture =textureLoader.load('/textures/bricks/color.jpg');
-    const bricksnormalTexture = textureLoader.load('/textures/bricks/normal.jpg');
-    const brickarmTexture = textureLoader.load('/textures/bricks/arm.jpg');
+    const brickscolorTexture =textureLoader.load('/textures/bricks/color.webp');
+    const bricksnormalTexture = textureLoader.load('/textures/bricks/normal.webp');
+    const brickarmTexture = textureLoader.load('/textures/bricks/arm.webp');
     brickscolorTexture.colorSpace = THREE.SRGBColorSpace
 
     brickscolorTexture.repeat.set(1,2)
@@ -55,11 +55,11 @@ export function HauntedHouse(){
     //#endregion
 
     //#region GrassTextures
-    const grasscolorTexture = textureLoader.load('/textures/grass/color.jpg')  
-    const grassarmTexture = textureLoader.load('/textures/grass/arm.jpg') 
-    const grassnormalTexture = textureLoader.load('/textures/grass/normal.jpg')  
-    const grassdisplacementTexture = textureLoader.load('/textures/grass/displacement.jpg')
-    const grassalphaTexture = textureLoader.load('/textures/grass/alpha.jpg')
+    const grasscolorTexture = textureLoader.load('/textures/grass/color.webp')  
+    const grassarmTexture = textureLoader.load('/textures/grass/arm.webp') 
+    const grassnormalTexture = textureLoader.load('/textures/grass/normal.webp')  
+    const grassdisplacementTexture = textureLoader.load('/textures/grass/displacement.webp')
+    const grassalphaTexture = textureLoader.load('/textures/grass/alpha.webp')
     grasscolorTexture.colorSpace = THREE.SRGBColorSpace
 
     grasscolorTexture.repeat.set(8,8)
@@ -79,9 +79,9 @@ export function HauntedHouse(){
     //#endregion
 
     //#region BushTextures
-    const bushcolorTexture = textureLoader.load('/textures/bush/color.jpg')
-    const busharmTexture = textureLoader.load('/textures/bush/arm.jpg')
-    const bushnormalTexture = textureLoader.load('/textures/bush/normal.jpg')
+    const bushcolorTexture = textureLoader.load('/textures/bush/color.webp')
+    const busharmTexture = textureLoader.load('/textures/bush/arm.webp')
+    const bushnormalTexture = textureLoader.load('/textures/bush/normal.webp')
     bushcolorTexture.colorSpace = THREE.SRGBColorSpace
 
     bushcolorTexture.repeat.set(2,1)
@@ -95,9 +95,9 @@ export function HauntedHouse(){
     //#endregion
 
     //#region GraveTextures
-    const gravecolorTexture = textureLoader.load('/textures/stone/color.jpg')
-    const gravearmTexture = textureLoader.load('/textures/stone/arm.jpg')
-    const gravenormalTexture = textureLoader.load('/textures/stone/normal.jpg')
+    const gravecolorTexture = textureLoader.load('/textures/stone/color.webp')
+    const gravearmTexture = textureLoader.load('/textures/stone/arm.webp')
+    const gravenormalTexture = textureLoader.load('/textures/stone/normal.webp')
     gravecolorTexture.colorSpace = THREE.SRGBColorSpace
 
     gravecolorTexture.repeat.set(0.3, 0.4)
@@ -110,7 +110,7 @@ export function HauntedHouse(){
     //#endregion
     
     //#region WindowTextures
-    const windowemissionTexture = textureLoader.load('/textures/window/windowemissionTexture.jpg')
+    const windowemissionTexture = textureLoader.load('/textures/window/windowemissionTexture.webp')
     //#endregion
     
     const House = new THREE.Group()

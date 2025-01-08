@@ -56,7 +56,8 @@ export function Luces() {
     ambientLightFolder.close();
     ambientLightFolder.addColor(ambientLight, 'color');
     ambientLightFolder.add(ambientLight, 'intensity', 0, 1, .001)
-    // scene.add(ambientLight);
+    ambientLightFolder.add(ambientLight, 'visible')
+    scene.add(ambientLight);
 
     //Directional Light
     const directionalLight = new THREE.DirectionalLight(0x00fffc, 0.9)
@@ -90,7 +91,7 @@ export function Luces() {
     const rectAreaLightFolder = gui.addFolder('RectAreaLight');
     rectAreaLightFolder.close();
     rectAreaLightFolder.addColor(rectAreaLight, 'color');
-    rectAreaLightFolder.add(rectAreaLight, 'intensity');
+    rectAreaLightFolder.add(rectAreaLight, 'intensity',0 , 10, 0.001);
     rectAreaLightFolder.add(rectAreaLight, 'width', 0, 10, 0.001);
     rectAreaLightFolder.add(rectAreaLight, 'height', 0, 10, 0.001);
     rectAreaLight.position.set(-1.5, 0, 1.5);
@@ -115,18 +116,23 @@ export function Luces() {
     //Helpers
 
     const hemisphereLightHelper = new THREE.HemisphereLightHelper(hemisphereLight, 0.1);
+    hemisphereLightFolder.add(hemisphereLightHelper, 'visible')
     scene.add(hemisphereLightHelper)
 
     const directionalLightHelper = new THREE.DirectionalLightHelper(directionalLight,0.1);
+    directionalLightFolder.add(directionalLightHelper, 'visible')
     scene.add(directionalLightHelper)
 
     const pointLightHelper = new THREE.PointLightHelper(pointLight,0.1);
+    pointLightFolder.add(pointLightHelper, 'visible')
     scene.add(pointLightHelper)
 
     const spotLightHelper = new THREE.SpotLightHelper(spotLight);
+    spotLightFolder.add(spotLightHelper, 'visible')
     scene.add(spotLightHelper);
 
     const rectAreaLightHelper = new RectAreaLightHelper(rectAreaLight)
+    rectAreaLightFolder.add(rectAreaLightHelper, 'visible')
     scene.add(rectAreaLightHelper)
 
     const renderer = new THREE.WebGLRenderer({ canvas: canvas })

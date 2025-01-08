@@ -30,13 +30,13 @@ export function DText(){
     })
 
     const textureLoader = new THREE.TextureLoader();
-    const matcapTexture = textureLoader.load('/textures/matcaps/8.png')
+    const matcapTexture = textureLoader.load('/textures/matcaps/8.webp')
     matcapTexture.colorSpace = THREE.SRGBColorSpace
 
     const fontLoader = new FontLoader();
     fontLoader.load('/fonts/helvetiker_regular.typeface.json',(font) => {
         const textGeometry = new TextGeometry(
-            'El Wilbert se la come',{
+            'Esto es una prueba',{
                 font: font,
                 size:0.5,
                 height: 0.2,

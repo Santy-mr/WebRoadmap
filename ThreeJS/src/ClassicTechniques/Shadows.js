@@ -26,9 +26,9 @@ export function Shadows(){
     })
 
     const textureLoader = new THREE.TextureLoader()
-    const bakedShadow = textureLoader.load('/textures/shadows/bakedShadow.jpg')
+    const bakedShadow = textureLoader.load('/textures/shadows/bakedShadow.webp')
     bakedShadow.colorSpace = THREE.SRGBColorSpace
-    const simpleShadow = textureLoader.load('/textures/shadows/simpleShadow.jpg')
+    const simpleShadow = textureLoader.load('/textures/shadows/simpleShadow.webp')
 
     const material = new THREE.MeshStandardMaterial()
     material.roughness = 0.7

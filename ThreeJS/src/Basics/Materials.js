@@ -30,22 +30,22 @@ export function Materials(){
     const scene = new THREE.Scene();
 
     const textureLoader = new THREE.TextureLoader();
-    const doorcolorTexture = textureLoader.load('/textures/door/color.jpg');
-    const dooralphaTexture = textureLoader.load('/textures/door/alpha.jpg');
-    const doorheightTexture = textureLoader.load('/textures/door/height.jpg');
-    const doornormalTexture = textureLoader.load('/textures/door/normal.jpg');
-    const doorocclusionTexture = textureLoader.load('/textures/door/ambientOcclusion.jpg');
-    const doormetalnessTexture = textureLoader.load('/textures/door/metalness.jpg');    
-    const doorroughnessTexture = textureLoader.load('/textures/door/roughness.jpg');
+    const doorcolorTexture = textureLoader.load('/textures/door/color.webp');
+    const dooralphaTexture = textureLoader.load('/textures/door/alpha.webp');
+    const doorheightTexture = textureLoader.load('/textures/door/height.webp');
+    const doornormalTexture = textureLoader.load('/textures/door/normal.webp');
+    const doorocclusionTexture = textureLoader.load('/textures/door/ambientOcclusion.webp');
+    const doormetalnessTexture = textureLoader.load('/textures/door/metalness.webp');    
+    const doorroughnessTexture = textureLoader.load('/textures/door/roughness.webp');
 
-    const matcapTexture = textureLoader.load('/textures/matcaps/8.png')
-    const gradientTexture = textureLoader.load('/textures/gradients/5.jpg')
+    const matcapTexture = textureLoader.load('/textures/matcaps/8.webp')
+    const gradientTexture = textureLoader.load('/textures/gradients/5.webp')
 
     doorcolorTexture.colorSpace = THREE.SRGBColorSpace
     matcapTexture.colorSpace = THREE.SRGBColorSpace
 
     // Material Addition
-
+    
     // MeshBasicMaterial
     // const material = new THREE.MeshBasicMaterial()
     //material.map = doorcolorTexture;
