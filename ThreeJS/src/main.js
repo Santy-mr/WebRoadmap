@@ -18,11 +18,10 @@ import { Galaxy } from "./ClassicTechniques/Galaxy.js";
 import { Scroll } from "./ClassicTechniques/Scroll.js";
 
 //Advanced Techniques
+import { Physics } from "./AdvancedTechniques/Physics.js";
 
+//Own
 //import { HeartParticles } from "./ClassicTechniques/Heart.js";
 import { Model } from "./Basics/LoadModel.js";
 
-Model();
-
-//Scroll();
-//Galaxy();
+Physics();
