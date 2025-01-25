@@ -19,9 +19,10 @@ import { Scroll } from "./ClassicTechniques/Scroll.js";
 
 //Advanced Techniques
 import { Physics } from "./AdvancedTechniques/Physics.js";
+import { ImportedModels } from "./AdvancedTechniques/ImportedModels.js";
 
 //Own
 //import { HeartParticles } from "./ClassicTechniques/Heart.js";
 import { Model } from "./Basics/LoadModel.js";
 
-Physics();
+ImportedModels();
