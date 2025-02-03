@@ -196,7 +196,7 @@ export function Materials(){
     TransmissionFolder.add(material, 'thickness').min(0).max(1).step(.0001);
 
     const rgbeLoader = new RGBELoader() 
-    rgbeLoader.load('/textures/environmentMap/2k.hdr', (environmentMap) =>{
+    rgbeLoader.load('/textures/environmentMaps/2k.hdr', (environmentMap) =>{
         environmentMap.mapping = THREE.EquirectangularReflectionMapping
         scene.background = environmentMap;
         scene.environment = environmentMap;
