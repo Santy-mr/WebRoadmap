@@ -23,9 +23,10 @@ import { ImportedModels } from "./AdvancedTechniques/ImportedModels.js";
 import { Raycast } from "./AdvancedTechniques/raycast.js";
 import { CustomModels } from "./AdvancedTechniques/CustomModels.js";
 import { EnvironmentMaps } from "./AdvancedTechniques/EnvirontmentMaps.js";
+import { Render } from "./AdvancedTechniques/Render.js";
 
 //Own
 //import { HeartParticles } from "./ClassicTechniques/Heart.js";
 import { Model } from "./Basics/LoadModel.js";
 
-EnvironmentMaps();
+Render();
