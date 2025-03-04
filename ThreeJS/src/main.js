@@ -25,8 +25,11 @@ import { CustomModels } from "./AdvancedTechniques/CustomModels.js";
 import { EnvironmentMaps } from "./AdvancedTechniques/EnvirontmentMaps.js";
 import { Render } from "./AdvancedTechniques/Render.js";
 
+import { CodeStructuring } from "./AdvancedTechniques/CodeStructuring.js";
+CodeStructuring();
+
 //Own
 //import { HeartParticles } from "./ClassicTechniques/Heart.js";
-import { Model } from "./Basics/LoadModel.js";
+// import { Model } from "./Own/LoadModel.js";
 
-Render();
+
