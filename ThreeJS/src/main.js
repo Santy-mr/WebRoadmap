@@ -24,9 +24,11 @@ import { Raycast } from "./AdvancedTechniques/raycast.js";
 import { CustomModels } from "./AdvancedTechniques/CustomModels.js";
 import { EnvironmentMaps } from "./AdvancedTechniques/EnvirontmentMaps.js";
 import { Render } from "./AdvancedTechniques/Render.js";
-
 import { CodeStructuring } from "./AdvancedTechniques/CodeStructuring.js";
-CodeStructuring();
+
+//Shaders
+import { Shaders } from "./Shaders/Shaders.js"
+Shaders();
 
 //Own
 //import { HeartParticles } from "./ClassicTechniques/Heart.js";
