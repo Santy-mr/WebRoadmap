@@ -17,7 +17,9 @@
     "gsap": "^3.12.5",
     "lil-gui": "^0.20.0",
     "three": "^0.176.0",
-    "vercel": "^41.7.4"
+    "vercel": "^41.7.4",
+    "vite-plugin-glsl": "^1.4.1",
+    "vite-plugin-restart": "^0.4.2"
   },
   "overrides": {
     "debug": "^4.3.4",
