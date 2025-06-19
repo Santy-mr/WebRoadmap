@@ -28,7 +28,10 @@ import { CodeStructuring } from "./AdvancedTechniques/CodeStructuring.js";
 
 //Shaders
 import { Shaders } from "./Shaders/Shaders.js"
-Shaders();
+import { ShaderPatterns } from "./Shaders/ShaderPatterns.js";
+
+
+ShaderPatterns();
 
 //Own
 //import { HeartParticles } from "./ClassicTechniques/Heart.js";
