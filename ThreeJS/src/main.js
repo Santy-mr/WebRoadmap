@@ -29,9 +29,9 @@ import { CodeStructuring } from "./AdvancedTechniques/CodeStructuring.js";
 //Shaders
 import { Shaders } from "./Shaders/Shaders.js"
 import { ShaderPatterns } from "./Shaders/ShaderPatterns.js";
+import { RagingSea } from "./Shaders/RagingSea.js";
 
-
-ShaderPatterns();
+RagingSea();
 
 //Own
 //import { HeartParticles } from "./ClassicTechniques/Heart.js";

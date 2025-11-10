@@ -81,8 +81,8 @@ void main(){
     // strength = step(0.8, strength);
 
     //Pattern 11
-    // float strength = step(0.8, mod(vUv.x * 10.0, 1.0));
-    // strength += step(0.8, mod(vUv.y * 10.0, 1.0));
+    float strength = step(0.8, mod(vUv.x * 10.0, 1.0));
+    strength += step(0.8, mod(vUv.y * 10.0, 1.0));
 
     //Pattern 12
     // float strength = step(0.8, mod(vUv.x * 10.0, 1.0));
@@ -247,14 +247,14 @@ void main(){
     // float strength = sin(cnoise(vUv * 10.0) * 20.0);
 
     //Pattern 50
-    float strength = step(0.9,sin(cnoise(vUv * 10.0) * 20.0));
+    // float strength = step(0.9,sin(cnoise(vUv * 10.0) * 20.0));
 
     //Clamp strength to [0, 1]
     strength = clamp(strength, 0.0, 1.0);
 
     //Color
     vec3 blackColor = vec3(0.0);
-    vec3 uvColor = vec3(vUv, 0.0);
+    vec3 uvColor = vec3(vUv, 0.5);
     vec3 mixColor = mix(blackColor, uvColor, strength);
 
     gl_FragColor = vec4(mixColor, 1.0);
