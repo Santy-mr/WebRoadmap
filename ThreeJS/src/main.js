@@ -30,8 +30,9 @@ import { CodeStructuring } from "./AdvancedTechniques/CodeStructuring.js";
 import { Shaders } from "./Shaders/Shaders.js"
 import { ShaderPatterns } from "./Shaders/ShaderPatterns.js";
 import { RagingSea } from "./Shaders/RagingSea.js";
+import { AnimatedGalaxy } from "./Shaders/AnimatedGalaxy.js";
 
-RagingSea();
+AnimatedGalaxy();
 
 //Own
 //import { HeartParticles } from "./ClassicTechniques/Heart.js";
